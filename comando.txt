@@ -1,0 +1,1 @@
+python import_zabbix.py "http://10.11.36.180:8080" "t0030469" "sidmtask87" teste.csv
