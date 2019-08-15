@@ -27,7 +27,7 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
     hostgroupid = str( zapi.hostgroup.get({"output": "shorten","filter":{ "name": hostgroup }})[0]['groupid'] )
 
     templateid = str( zapi.template.get({"output": "shorten", "filter": { "host": template }})[0]['templateid'] ) 
-
+    print(inventory)
     if inventory is 'automatic':
         inventoryid = 1
     elif inventory is 'manual':
