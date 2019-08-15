@@ -1,2 +1,2 @@
-Hostgroup;Template;Hostname;Visible name;Agent type;DNS;IP;Connect to;Proxy;Inventory;Macros
-Producao;Template - Linux;servidor1;Servidor producao 01;agent;servidor1.dominio.com;10.1.1.1;ip;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG
+Hostgroup;Template;Hostname;Visible name;DNS;IP;Agent type;Connect to;Proxy;Inventory;Macros
+Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;ip;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG
