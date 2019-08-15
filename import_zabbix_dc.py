@@ -61,8 +61,8 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
                     "dns": dns,
                     "port": 10050 }],
                 "groups": [{ "groupid": hostgroupid }], #id do host grupo
-                "templates": [{ "templateid": templateid }] , #id do template
-                "inventory_mode" : inventoryid
+                "templates": [{ "templateid": templateid }] #id do template
+                #"inventory_mode" : inventoryid
          })
     print("Verificando se foi criado")
     hostid = str(zapi.host.get({"output": "shorten","filter":{ "host": hostname }})[0]['hostid'] )
