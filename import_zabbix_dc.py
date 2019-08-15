@@ -17,7 +17,7 @@ zapi.login(username, password)
 # Hostgroup;Template;Hostname;Visible name;DNS;IP;Agent type;Connect to;Proxy;Inventory;Macros
 f = csv.reader(open(arquivo), delimiter=';') #lendo-a-lista de host e separando pelo delimatador ';'
 
-for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory;macros] in f:
+for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,macros] in f:
 
     hostgroupid = zapi.hostgroup.get({"output": "shorten","filter":{ "name": hostgroup }})   
     # Se hostgroup vazio, cria um novo
