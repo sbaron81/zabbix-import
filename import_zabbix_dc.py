@@ -45,7 +45,7 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
     if hostid:
          print("Host ja existe")
     else: 
-         print("Cria host")
+         print("Criando host")
          zapi.host.create({
                 "host": hostname,
                 "name": alias,
@@ -60,12 +60,14 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
                 "templates": [{ "templateid": templateid }] , #id do template
                 "inventory_mode" : inventoryid
          })
-         hostid = str( zapi.host.get({"output": "shorten","filter":{ "host": hostname }})[0]['hostid'] )
 
-         if hostid:
-             print("Host criado com sucesso")
-         else:
-            print("Host nao criado")
+    hostid = str(zapi.host.get({"output": "shorten","filter":{ "host": hostname }})[0]['hostid'] )
+
+    if hostid:
+        print("Host criado com sucesso")
+    else:
+        print("Host nao criado")
+    
          #if ip_internet:
          #   zapi.usermacro.create({
          #       "hostid": hostid,
