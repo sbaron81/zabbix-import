@@ -35,8 +35,8 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
     else:
         inventoryid = -1
 
-    if inventory is not "" or inventory is not "none" :
-       proxyid = str( zapi.proxy.get( {"output": "shorten","filter":{ "host": proxy } })[0]['proxyid'] )
+    #if inventory is not "" or inventory is not "none" :
+    #   proxyid = str( zapi.proxy.get( {"output": "shorten","filter":{ "host": proxy } })[0]['proxyid'] )
 
     hostid = zapi.host.get({"output": "shorten","filter":{ "host": hostname }}) 
 
