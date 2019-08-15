@@ -60,7 +60,7 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
                 "templates": [{ "templateid": templateid }] , #id do template
                 "inventory_mode" : inventoryid
          })
-
+    print("Verificando se foi criado")
     hostid = str(zapi.host.get({"output": "shorten","filter":{ "host": hostname }})[0]['hostid'] )
 
     if hostid:
