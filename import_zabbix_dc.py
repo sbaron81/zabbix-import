@@ -14,10 +14,10 @@ arquivo = sys.argv[4]
 zapi = ZabbixAPI(server = server, path="")
 zapi.login(username, password)
 
-# Hostgroup;Template;Hostname;Visible name;Agent type;IP;DNS;Connect to;Proxy;Inventory;Macros
+# Hostgroup;Template;Hostname;Visible name;Agent type;DNS;IP;Connect to;Proxy;Inventory;Macros
 f = csv.reader(open(arquivo), delimiter=';') #lendo-a-lista de host e separando pelo delimatador ';'
 
-for [hostgroup,template,hostname,alias,dns,ip] in f:
+for [hostgroup,template,hostname,alias,agent;dns,ip,connectto,proxy,inventory;macros] in f:
 
     hostgroupid = zapi.hostgroup.get({"output": "shorten","filter":{ "name": hostgroup }})   
     # Se hostgroup vazio, cria um novo
@@ -28,14 +28,14 @@ for [hostgroup,template,hostname,alias,dns,ip] in f:
 
     templateid = str( zapi.template.get({"output": "shorten", "filter": { "host": template }})[0]['templateid'] ) 
 
-    inventoryid = 1
-    #if inventory is "Automatic":
-    #    inventoryid = 1
-    #elif inventory is "Manual":
-    #    inventoryid = 0
-    #else:
-    #    inventoryid = -1
-    #proxyid = str( zapi.proxy.get( {"output": "shorten","filter":{ "host": proxy } })[0]['proxyid'] )
+    if inventory is "automatic":
+        inventoryid = 1
+    elif inventory is "manual":
+        inventoryid = 0
+    else:
+        inventoryid = -1
+
+    proxyid = str( zapi.proxy.get( {"output": "shorten","filter":{ "host": proxy } })[0]['proxyid'] )
 
     hostid = zapi.host.get({"output": "shorten","filter":{ "host": hostname }}) 
 
@@ -48,11 +48,14 @@ for [hostgroup,template,hostname,alias,dns,ip] in f:
          zapi.host.create({
                 "host": hostname,
                 "name": alias,
-                "interfaces": [ {"type": "1",
-                    "default": "1",
+                "interfaces": [{
+                    "type": "1",
+                    "main": "1",
                     "useip": "0",
                     "ip": ip,
-                    "dns": dns }],
+                    "dns": dns,
+                    "port": 10050 
+                }],
                 "groups": [{ "groupid": hostgroupid }], #id do host grupo
                 "templates": [{ "templateid": templateid }] , #id do template
                 "inventory_mode" : inventoryid
