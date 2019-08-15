@@ -14,7 +14,7 @@ arquivo = sys.argv[4]
 zapi = ZabbixAPI(server = server, path="")
 zapi.login(username, password)
 
-#Hostgroup;Template;hostname;Alias;IP;DNS
+# Hostgroup;Template;Hostname;Visible name;Agent type;IP;DNS;Connect to;Proxy;Inventory;Macros
 f = csv.reader(open(arquivo), delimiter=';') #lendo-a-lista de host e separando pelo delimatador ';'
 
 for [hostgroup,template,hostname,alias,dns,ip] in f:
