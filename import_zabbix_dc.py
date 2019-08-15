@@ -40,7 +40,7 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
     print("--")
     hostid = zapi.host.get({"output": "shorten","filter":{ "host": hostname }}) 
 
-    print(hostgroup,hostgroupid,hostid,template,templateid,hostname,alias,dns,ip,inventoryid)
+    print(hostgroup,hostgroupid),template,templateid,hostname,alias,dns,ip,agent,connectto,proxy,inventory,inventoryid,macro)
 
     if hostid:
          print("Host ja existe")
