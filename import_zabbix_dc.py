@@ -55,14 +55,15 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
                     "useip": "0",
                     "ip": ip,
                     "dns": dns,
-                    "port": 10050 
-                }],
+                    "port": 10050 }],
                 "groups": [{ "groupid": hostgroupid }], #id do host grupo
                 "templates": [{ "templateid": templateid }] , #id do template
                 "inventory_mode" : inventoryid
          })
          hostid = str( zapi.host.get({"output": "shorten","filter":{ "host": hostname }})[0]['hostid'] )
 
+         if hostid:
+             print("Host criado com sucesso")
          #if ip_internet:
          #   zapi.usermacro.create({
          #       "hostid": hostid,
