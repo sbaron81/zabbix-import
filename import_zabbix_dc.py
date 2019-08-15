@@ -37,7 +37,7 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
 
     #if inventory is not "" or inventory is not "none" :
     #   proxyid = str( zapi.proxy.get( {"output": "shorten","filter":{ "host": proxy } })[0]['proxyid'] )
-
+    print("--")
     hostid = zapi.host.get({"output": "shorten","filter":{ "host": hostname }}) 
 
     print(hostgroup,hostgroupid,hostid,template,templateid,hostname,alias,dns,ip,inventoryid)
@@ -64,6 +64,8 @@ for [hostgroup,template,hostname,alias,dns,ip,agent,connectto,proxy,inventory,ma
 
          if hostid:
              print("Host criado com sucesso")
+         else:
+            print("Host nao criado")
          #if ip_internet:
          #   zapi.usermacro.create({
          #       "hostid": hostid,
