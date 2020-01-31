@@ -5,8 +5,8 @@ Script desenvolvido em Python que permite importar hosts no Zabbix através de u
 
 ### Pré-requisito
 
-Python  
-Zabbix API in Python
+- Python  
+- Zabbix API in Python
 
 
 ### Instalação e utilização
