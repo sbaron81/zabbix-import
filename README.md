@@ -32,11 +32,13 @@ Nas colunas Hostgroup, Template e Macros podem ter mais de um elemento, para iss
 
 **Obs**: Não inclua o cabeçalho no arquivo, o arquivo csv deve ter somente os dados a serem importados.
 
-Exemplo:
+Exemplo ![arquivo_exemplo.csv](https://raw.githubusercontent.com/sbaron81/zabbix-import/master/arquivo_exemplo.csv) :
 
-`$ cat arquivo_exemplo.csv`  
-`Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;dns;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG`  
-`Producao,Switches;Template - Switches,Template - Switch HPE;SW-ACESSO-001;Switch de Acesso 001;;10.1.10.5;SNMP;ip;none;automatic;SNMPCOMMUNITY=public`
+```
+$ cat arquivo_exemplo.csv`  
+Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;dns;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG  
+Producao,Switches;Template - Switches,Template - Switch HPE;SW-ACESSO-001;Switch de Acesso 001;;10.1.10.5;SNMP;ip;none;automatic;SNMPCOMMUNITY=public
+```
 
 5. Rode o script 
 
