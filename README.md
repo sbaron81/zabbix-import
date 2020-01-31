@@ -32,7 +32,7 @@ Nas colunas Hostgroup, Template e Macros podem ter mais de um elemento, para iss
 
 **Obs**: Não inclua o cabeçalho no arquivo, o arquivo csv deve ter somente os dados a serem importados.
 
-Exemplo ![arquivo_exemplo.csv](https://raw.githubusercontent.com/sbaron81/zabbix-import/master/arquivo_exemplo.csv) :
+Exemplo [arquivo_exemplo.csv](https://raw.githubusercontent.com/sbaron81/zabbix-import/master/arquivo_exemplo.csv) :
 
 ```
 $ cat arquivo_exemplo.csv`  
