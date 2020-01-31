@@ -1,1 +1,1 @@
-python import_zabbix.py "http://servidor/zabbix" "usuario" "minhasenha" servidores_exemplo.csv
+python import_zabbix.py "http://servidor/zabbix" "usuario" "minhasenha" arquivo_exemplo.csv
