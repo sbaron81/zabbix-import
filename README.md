@@ -9,7 +9,7 @@ Python
 Zabbix API in Python
 
 
-### Instalação
+### Instalação e utilização
 
 1. Faça o clone deste projeto 
 
@@ -27,7 +27,10 @@ Zabbix API in Python
 
 `Hostgroup;Template;Hostname;Visible name;DNS;IP;Agent type;Connect to;Proxy;Inventory;Macros`
 
-Obs: Não inclua o cabeçalho no arquivo, o arquivo csv deve ter somente os dados a serem importados.
+Cada coluna deve ser separada pelo delimitador";"
+Nas colunas Hostgroup, Template e Macros podem ter mais de um elemento, para isso separe-os com ",".
+
+**Obs**: Não inclua o cabeçalho no arquivo, o arquivo csv deve ter somente os dados a serem importados.
 
 Exemplo:
 
