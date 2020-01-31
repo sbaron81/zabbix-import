@@ -5,7 +5,7 @@ Script desenvolvido em Python que permite importar hosts no Zabbix através de u
 
 ### Pré-requisito
 
-Python
+Python  
 Zabbix API in Python
 
 
@@ -31,9 +31,9 @@ Obs: Não inclua o cabeçalho no arquivo, o arquivo csv deve ter somente os dado
 
 Exemplo:
 
-`$ cat arquivo_exemplo.csv  
-Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;ip;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG  
-Producao,Switches;Template - Switches,Template - Switch HPE;SW-ACESSO-001;Switch de Acesso 001;;10.1.10.5;SNMP;ip;none;automatic;SNMPCOMMUNITY=public`
+`$ cat arquivo_exemplo.csv`  
+`Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;ip;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG`  
+`Producao,Switches;Template - Switches,Template - Switch HPE;SW-ACESSO-001;Switch de Acesso 001;;10.1.10.5;SNMP;ip;none;automatic;SNMPCOMMUNITY=public`
 
 5. Rode o script 
 
