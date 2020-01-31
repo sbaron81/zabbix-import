@@ -35,7 +35,7 @@ Nas colunas Hostgroup, Template e Macros podem ter mais de um elemento, para iss
 Exemplo:
 
 `$ cat arquivo_exemplo.csv`  
-`Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;ip;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG`  
+`Producao;Template - Linux;servidor1;Servidor producao 01;servidor1.dominio.com;10.1.1.1;agent;dns;none;automatic;MY_MACRO=ABC,MY_SECOND_MACRO=EFG`  
 `Producao,Switches;Template - Switches,Template - Switch HPE;SW-ACESSO-001;Switch de Acesso 001;;10.1.10.5;SNMP;ip;none;automatic;SNMPCOMMUNITY=public`
 
 5. Rode o script 
